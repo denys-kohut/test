@@ -1,0 +1,236 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Kode Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  position: relative;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.main-block {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 20px;
+  height: 100vh;
+}
+
+.chips {
+  position: absolute;
+  width: 100px;
+  left: 10%;
+
+}
+
+.chips100 {
+  top: 350px;
+}
+
+.chips25 {
+  top: 400px;
+}
+
+.chips10 {
+  top: 450px;
+}
+
+.chips5 {
+  top: 500px;
+}
+
+.balans {
+  min-width: 780px;
+  border: 1px solid #6e6b6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  top: 75%;
+  left: 20%;
+  background-color: #199905;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.balans-user {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.place-bets {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: -1;
+
+}
+
+.red {
+  width: 50%;
+  background-color: #d61e0d;
+  border-radius: 25px 0 0 0;
+}
+
+.black {
+  width: 50%;
+  border-radius: 0 25px 0 0;
+  background-color: #17070f;
+}
+
+.active-color {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.block-user {
+  position: relative;
+  width: 100%;
+  height: 5px;
+}
+
+.user {
+  position: absolute;
+  left: 68%;
+  top: -53px;
+  z-index: 5;
+  height: 400px;
+}
+
+.croupier {
+  position: absolute;
+  left: 31%;
+  top: -300px;
+  z-index: -5;
+  height: 320px;
+}
+
+.circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #17070f;
+  left: -12%;
+  transition: transform 5s;
+}
+
+.circle::before,
+.circle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.circle::before {
+  left: 0;
+  background-color: #d61e0d;
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+
+.circle::after {
+  right: 0;
+  background-color: #d61e0d;
+  clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+}
+
+.block-circle {
+  position: relative;
+  width: inherit;
+  margin-bottom: 50px;
+}
+
+.point-res {
+  width: 48px;
+  height: 37px;
+  background-color: #199905;
+  clip-path: polygon(47% 49%, 100% 100%, 100% 0);
+  position: absolute;
+  top: 45%;
+  left: 25%;
+}
+
+.speak {
+  min-width: 350px;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 42% 76%, 0 95%, 16% 77%, 0 76%);
+  background-color: rgb(188, 189, 182);
+  position: absolute;
+  top:  -350px;
+  left: 500px;
+  padding: 5px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10%;
+}
+
+.btn {
+  padding: 3px;
+  border-radius: 25px;
+  min-width: 150px;
+  margin-top: 30px;
+  cursor: pointer;
+  background-color: rgb(163, 163, 161);
+  border: none;
+  min-height: 50px;
+}
+
+.btn:hover {
+  background-color: rgb(201, 233, 20);
+  transition: background-color 0.3s;
+}
+
+.speak-passive,
+.passive {
+  display: none;
+}
+
+.pasive-btn {
+  opacity: 0;
+  cursor: none;
+}
+
+.active {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .chips {
+    top: 730px;
+  
+  }
+  
+  .chips100 {
+    left: 30%;
+  }
+  
+  .chips25 {
+    left: 40%;
+  }
+  
+  .chips10 {
+    left: 50%;
+  }
+  
+  .chips5 {
+    left: 60%;
+  }
+}
